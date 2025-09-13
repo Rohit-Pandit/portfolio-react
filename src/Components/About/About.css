@@ -38,6 +38,7 @@
     flex-direction: column;
     gap: 30px;
 }
+
 .about-skill{
     display: flex;
     gap: 50px;
@@ -52,7 +53,7 @@
 .about-skill hr{
     outline: none;
     border: none;
-    width: 50%;
+    
     height: 8px;
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908,#B415FF 106.28%);

@@ -1,19 +1,62 @@
 import React from 'react';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <img src={logo} alt='logo'/>
+          <div className="navbar-logo">
+            <NavLink to="/">
+              <img src={logo} alt="logo" />
+            </NavLink>
+        </div>
         <ul className='nav-menu'>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Projects</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <li>
+              <NavLink 
+                 to="/"  
+                 end
+                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+               Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                 to="/about"  
+                 end
+                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+                  About Me
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                 to="/projects"  
+                 end
+                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+              Projects
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                 to="/contact" 
+                 end
+                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+              Contact
+              </NavLink>
+            </li>
+             <li>
+              <NavLink 
+                 to="/certificate" 
+                 end
+                 className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
+              Certificate
+              </NavLink>
+            </li>
         </ul>
-        <div className='nav-connect'>Connect With Me</div>
+        {/* <div className='nav-connect'>Connect With Me</div> */}
+        <div className="nav-connect">
+           <a href="rohitpandit.190425@gmail.com">Connect With Me</a>
+      </div>
     </div>
   )
 }

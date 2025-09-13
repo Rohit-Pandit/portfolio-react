@@ -109,6 +109,16 @@
   border: 2px solid white;
 }
 
+a {
+  color: white;             /* default link color */
+  text-decoration: none;    /* remove underline */
+}
+
+a:hover {
+          
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-section {
@@ -120,3 +130,5 @@
     width: 100%;
   }
 }
+
+

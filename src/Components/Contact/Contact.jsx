@@ -2,7 +2,8 @@ import React from 'react';
 import phone from './../../assets/phone.png';
 import email from './../../assets/email.png';
 import location from './../../assets/location.png';
-import './Contact.css'
+import linkedin from './../../assets/linkedin.png';
+import './Contact.css';
 
 
 const Contact = () => {
@@ -19,6 +20,17 @@ const Contact = () => {
                     <div className="contact-detail">
                         <img src={email} alt="" /> <p>rohitpandit.190425@gmail.com</p>
                     </div>
+                   <div className="contact-detail">
+                        <img src={linkedin} alt="LinkedIn" />
+                        <a
+                            href="https://www.linkedin.com/in/rohit-pandit-88b39621a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                          Connect
+                        </a>
+                    </div>
+
                     <div className="contact-detail">
                         <img src={phone} alt="" /> <p>+91 6203756013</p>
                     </div>

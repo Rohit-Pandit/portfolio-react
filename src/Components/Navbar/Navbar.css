@@ -1,9 +1,17 @@
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;            /* stretch full width */
+  background: #161513;     /* or your theme color */
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;           /* keeps it above page content */
 }
+
+
 .navbar img {
   height: 75px;           
   width: auto;
@@ -24,6 +32,22 @@
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+.nav-link {
+  color: white;            /* default color */
+  text-decoration: none;   /* remove underline */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #c72da6;          /* LinkedIn blue on hover (or pick another accent) background: linear-gradient(264deg, #DF8908,#B415FF 106.28%);*/ 
+}
+
+.nav-link.active {
+  color: #c72da6;         /* highlight active page */
+  font-weight: 600;
+}
+
 .nav-connect:hover{
     transform: scale(1.05);
 }
