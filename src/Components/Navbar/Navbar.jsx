@@ -30,7 +30,7 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink 
-                 to="/projects"  
+                 to="/project"  
                  end
                  className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
               Projects
@@ -49,13 +49,13 @@ const Navbar = () => {
                  to="/certificate" 
                  end
                  className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>
-              Certificate
+              Certificates
               </NavLink>
             </li>
         </ul>
         {/* <div className='nav-connect'>Connect With Me</div> */}
         <div className="nav-connect">
-           <a href="rohitpandit.190425@gmail.com">Connect With Me</a>
+           <a href="mailto:rohitpandit.190425@gmail.com">Connect With Me</a>
       </div>
     </div>
   )

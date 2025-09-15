@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "To-Do App",
+    "description": "A task management app with add, edit, delete, and localStorage support.",
+    "image": "project1.png",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "link": "https://your-todo-demo-link.com",
+    "github": "https://github.com/your-username/todo-app"
+  },
+  {
+    "id": 2,
+    "title": "Portfolio Website",
+    "description": "Responsive portfolio showcasing my skills and projects.",
+    "image": "project2.png",
+    "tech": ["React", "CSS", "React Router"],
+    "link": "https://your-portfolio-link.com",
+    "github": "https://github.com/your-username/portfolio"
+  },
+  {
+    "id": 3,
+    "title": "Weather App",
+    "description": "Fetches real-time weather data using an API with clean UI.",
+    "image": "project3.png",
+    "tech": ["React", "API", "Bootstrap"],
+    "link": "https://your-weather-demo-link.com",
+    "github": "https://github.com/your-username/weather-app"
+  }
+]
