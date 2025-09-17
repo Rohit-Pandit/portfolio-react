@@ -1,0 +1,57 @@
+[
+    {
+        "id" : "1",
+        "title":"Oracle Generative AI Professional",
+        "image" : "./certificates/OCI25GAIOCP.jpg",
+        "issuer":"Oracle",
+        "date":"03/09/2025",
+        "pdf":"./certificates/ai_associate.pdf",
+        "skills":["LLMs", "RAG","Vector database"]
+        
+    },
+    {
+        "id" : "2",
+        "title":"Oracle AI Fondation Associate",
+        "image" : "./certificates/OCI25GAIOCP.jpg",
+        "issuer":"Oracle",
+        "date":"08/09/2025",
+        "pdf":"./certificates/gen_ai_professional.pdf",
+        "skills":["Fundamentals of AI", "Fundamentals of ML"]
+        
+    },
+    {
+        "id" : "3",
+        "title":"MongoDB: The Complete Guide to NoSQL Database Development",
+        "image" : "./certificates/mongoDB.jpg",
+        "issuer":"EDUCBA",
+        "date":"08/09/2025",
+        "pdf":"./certificates/mongoDb.pdf",
+        "skills":[
+                "Data Architecture",
+                "Database Development",
+                "NoSQL",
+                "Database Design",
+                "Database Management",
+                "Database Architecture","Administration"]
+        
+    },
+    {
+        "id" : "4",
+        "title":"AI for CX Transformation",
+        "image" : "./certificates/AI_CX.jpg",
+        "issuer":"TTEC Digital",
+        "date":"June 2024",
+        "pdf":"./certificates/AI_CX.pdf",
+        "skills":["Artificial Intelligence"]
+        
+    },
+    {
+         "id" : "5",
+        "title":"Introduction to Structured Query Language (SQL)",
+        "image" : "./certificates/sql.jpg",
+        "issuer":"University of Michigan",
+        "date":"Oct 2024",
+        "pdf":"./certificates/sql.pdf",
+        "skills":["SQL language", "tables and its operations","Relationaships: one-one,one-many,many-many"]
+    }
+]
