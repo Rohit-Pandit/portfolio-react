@@ -3,27 +3,49 @@
     "id": 1,
     "title": "To-Do App",
     "description": "A task management app with add, edit, delete, and localStorage support.",
-    "image": "project1.png",
+    "image": "/projectImg/todolist.png",
     "tech": ["JavaScript", "HTML", "CSS"],
-    "link": "https://your-todo-demo-link.com",
-    "github": "https://github.com/your-username/todo-app"
+    "link": "https://todolist-mini-two.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/todolist-mini"
   },
   {
     "id": 2,
-    "title": "Portfolio Website",
-    "description": "Responsive portfolio showcasing my skills and projects.",
-    "image": "project2.png",
-    "tech": ["React", "CSS", "React Router"],
-    "link": "https://your-portfolio-link.com",
-    "github": "https://github.com/your-username/portfolio"
+    "title": "Coin tracker",
+    "description": "It offers a user-friendly platform with filtering capabilities to enhance user experience and provide focused market insights.",
+    "image": "/projectImg/coinTracker.png",
+    "tech": ["JavaScript", "API", "HTML", "CSS"],
+    "link": "https://coin-tracker-pied.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/coin-tracker"
   },
   {
     "id": 3,
     "title": "Weather App",
     "description": "Fetches real-time weather data using an API with clean UI.",
-    "image": "project3.png",
-    "tech": ["React", "API", "Bootstrap"],
-    "link": "https://your-weather-demo-link.com",
-    "github": "https://github.com/your-username/weather-app"
+    "image": "/projectImg/weather.png",
+    "tech": ["JavaScript", "API", "HTML", "CSS"],
+    "link": "https://weather-wise-gray.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/weather-wise"
+  },
+   {
+    "id": 4,
+    "title": "Dicee Game",
+    "description": "A fun Dicee Game.",
+    "image": "/projectImg/diceegame.png",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "link": "https://dicee-game-ecru.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/DiceeGame"
+  },
+
+  {
+    "id": 5,
+    "title": "Interactive Drum Kit",
+    "description": "A dynamic and engaging web-based drum kit.",
+    "image": "/projectImg/drumkit.png",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "link": "https://drum-music-orcin.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/DrumMusic"
   }
+  
+  
+
 ]
