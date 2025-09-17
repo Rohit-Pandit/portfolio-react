@@ -53,5 +53,25 @@
         "date":"Oct 2024",
         "pdf":"./certificates/sql.pdf",
         "skills":["SQL language", "tables and its operations","Relationaships: one-one,one-many,many-many"]
+    },
+    {
+        "id" : "6",
+        "title":"Oracle Certified Associate",
+        "image" : "./certificates/OCI25GAIOCP.jpg",
+        "issuer":"Oracle",
+        "date":"March 2023",
+        "pdf":"./certificates/Oracle_certificate.pdf",
+        "skills":["Core JAVA programming"]
+        
+    },
+    {
+        "id" : "7",
+        "title":"React Basics",
+        "image" : "./certificates/react.png",
+        "issuer":"Meta",
+        "date":"June 2024",
+        "pdf":"https://www.coursera.org/account/accomplishments/verify/8KCY78KGL5ML",
+        "skills":["Resuable components","Rendering","Props"]
+        
     }
 ]

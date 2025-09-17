@@ -2,52 +2,107 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;            /* stretch full width */
-  background: #161513;     /* or your theme color */
-  padding: 15px 40px;
+  width: 100%;
+  background: #161513;
+  padding: 15px 20px;  /* reduced side padding */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; /* instead of space-around */
   align-items: center;
-  z-index: 1000;           /* keeps it above page content */
+  z-index: 1000;
+  box-sizing: border-box; /* include padding in width */
+  overflow-x: hidden; /* prevent scroll */
 }
-
 
 .navbar img {
-  height: 75px;           
+  height: 60px;
   width: auto;
 }
-.nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap : 60px;
-    font-size: 18px;
-    cursor: pointer;
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;  /* reduce from 60px */
+  font-size: 18px;
+  cursor: pointer;
+  flex-wrap: wrap; /* allow wrapping if needed */
 }
-.nav-connect{
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: linear-gradient(267deg , #DA7C25 0.36%, #B923E1);
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+
+.nav-connect {
+  margin-left: 20px; /* spacing from nav links */
+  padding: 10px 16px;
+  border-radius: 50px;
+  background: linear-gradient(267deg , #DA7C25 0.36%, #B923E1);
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  white-space: nowrap; /* keep button text in one line */
 }
+
+
 .nav-link {
-  color: white;            /* default color */
-  text-decoration: none;   /* remove underline */
+  color: white;
+  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #c72da6;          /* LinkedIn blue on hover (or pick another accent) background: linear-gradient(264deg, #DF8908,#B415FF 106.28%);*/ 
+  color: #c72da6;
 }
 
 .nav-link.active {
-  color: #c72da6;         /* highlight active page */
+  color: #c72da6;
   font-weight: 600;
 }
 
-.nav-connect:hover{
-    transform: scale(1.05);
+
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 80px; /* below navbar */
+    left: 0;
+    width: 100%;
+    background: #161513;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    display: none; /* hidden by default */
+  }
+
+  .nav-menu.mobile-open {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-connect {
+    margin-top: 10px;
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger on mobile */
+  }
 }
