@@ -1,56 +1,92 @@
-.home{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 35px;
-}
-.home img{
-    margin-top: 80px;
-    border-radius: 50%;
-}
-.home h1{
-    text-align: center;
-    width: 70%;
-    font-size: 60px;
-    font-weight: 300px;
-}
-.home h1 span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.home p{
-    width: 50%;
-    text-align: center;
-    font-size: 24px;
-    line-height: 40px;
-}
-.home-action{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 18px;
-    font-weight: 200;
-    margin-bottom: 50px;
-}
-.home-connect{
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: linear-gradient(267deg , #DA7C25 0.36%, #B923E1);
-    font-size: 18px;
-    cursor: pointer;
-}
-.home-resume{
-    padding: 10px 20px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.home-connect:hover{
-    border: 2px solid white;
+/* Profile Image */
+.home img {
+  margin-top: 5rem;
+  border-radius: 50%;
+  width: 40vw;        /* responsive size */
+  max-width: 12rem;   /* limit on desktop */
+  height: auto;
 }
-.home-resume:hover{
-    border-color: #B415FF;
+
+/* Heading */
+.home h1 {
+  width: 100%;
+  max-width: 90%;      /* take almost full width on mobile */
+  font-size: clamp(1.6rem, 5vw, 3.5rem);  /* scales with screen */
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 0 auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.home h1 span {
+  background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph */
+.home p {
+  width: 100%;
+  max-width: 80%;
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* scales between 16px–20px */
+  line-height: 1.6;
+  color: #ccc;
+  margin: 0 auto;
+}
+
+/* Action Buttons */
+.home-action {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.home-connect,
+.home-resume {
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 10rem;
+}
+
+.home-connect {
+  background: linear-gradient(267deg, #da7c25 0.36%, #b923e1);
+  color: #fff;
+  border: none;
+}
+
+.home-resume {
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-connect:hover {
+  border: 2px solid white;
+  transform: translateY(-2px);
+}
+
+.home-resume:hover {
+  border-color: #b415ff;
+  transform: translateY(-2px);
 }
