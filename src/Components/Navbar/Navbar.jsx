@@ -1,84 +1,82 @@
-import React, { useState } from 'react';
-import './Navbar.css';
-import { NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.png';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import {
+  FaHome,
+  FaUser,
+  FaEnvelope,
+  FaProjectDiagram,
+  FaCertificate,
+} from "react-icons/fa";
+
+import "./Navbar.css";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
+
+  const links = [
+    { to: "/", label: "Home", icon: <FaHome /> },
+    { to: "/about", label: "About Me", icon: <FaUser /> },
+    { to: "/project", label: "Projects", icon: <FaProjectDiagram /> },
+    { to: "/contact", label: "Contact", icon: <FaEnvelope /> },
+    { to: "/certificate", label: "Certificates", icon: <FaCertificate /> },
+  ];
 
   return (
-    <div className='navbar'>
+    <div className="navbar">
+      {/* Logo */}
       <div className="navbar-logo">
-        <NavLink to="/" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/" >
           <img src={logo} alt="logo" />
         </NavLink>
       </div>
 
-      {/* Navigation menu */}
-      <ul className={`nav-menu ${menuOpen ? "mobile-open" : ""}`}>
-        <li>
-          <NavLink 
-            to="/"  
-            end
-            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/about"  
-            end
-            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-            onClick={() => setMenuOpen(false)}
-          >
-            About Me
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/project"  
-            end
-            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/contact" 
-            end
-            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/certificate" 
-            end
-            className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Certificates
-          </NavLink>
-        </li>
+      {/* Desktop Menu */}
+      <ul className="nav-menu desktop">
+        {links.map(({ to, label }) => (
+          <li key={to}>
+            <NavLink
+              to={to}
+              end
+              className={({ isActive }) =>
+                isActive ? "nav-link active" : "nav-link"
+              }
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
         <li className="nav-connect">
-          <a href="mailto:rohitpandit.190425@gmail.com" onClick={() => setMenuOpen(false)}>
+          <a
+            href="mailto:rohitpandit.190425@gmail.com"
+      
+          >
             Connect With Me
           </a>
         </li>
       </ul>
 
-      {/* Hamburger button */}
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-        <span></span>
-        <span></span>
-        <span></span>
+      {/* Mobile Menu */}
+      <div className="mobile-menu">
+        <ul>
+          {links.map(({ to, icon }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                end
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                
+              >
+                {icon}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
       </div>
+
+  
     </div>
   );
 };
