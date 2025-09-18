@@ -10,12 +10,13 @@ const Contact = () => {
   return (
     <div className='contact'>
         <div className="contact-title">
-            <h1>Get in touch</h1>
+             <h1>Get in Touch</h1>
+             <p>Let’s connect and build something amazing together 🚀</p>
         </div>
         <div className="contact-section">
             <div className="contact-left">
                 <h1>Let's talk</h1>
-                <p>I'm currently open to work</p>
+                <p>I’m currently <span>open to work</span> and <span>freelance</span> opportunities.</p>
                 <div className="contact-details">
                     <div className="contact-detail">
                         <img src={email} alt="" /> <p>rohitpandit.190425@gmail.com</p>

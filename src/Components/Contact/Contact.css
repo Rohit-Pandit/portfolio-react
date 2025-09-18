@@ -1,20 +1,27 @@
 .contact {
   width: 100%;
-  padding: 60px 20px;
-
+  padding: 4rem 2rem;
   font-family: 'Poppins', sans-serif;
+  background: #121212;
+  color: #fff;
 }
 
 .contact-title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 3rem;
 }
 
 .contact-title h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  position: relative;
-  
+  font-size: clamp(2rem, 5vw, 3rem);
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-title p {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-top: 0.5rem;
 }
 
 .contact-section {
@@ -46,6 +53,9 @@
   
   margin-bottom: 20px;
 }
+.contact-left p span{
+  color: #DA7C25;
+}
 
 .contact-details {
   display: flex;
@@ -69,44 +79,59 @@
  
   font-size: 1rem;
 }
+.contact-right {
+  flex: 1;
+  min-width: 0;          /* ✅ allows flex child to shrink */
+  width: 100%;
+  box-sizing: border-box;
+}
+
 
 .contact-right label {
   display: block;
   font-weight: 500;
- 
   margin: 10px 0 5px;
 }
 
 .contact-right input,
 .contact-right textarea {
   width: 100%;
+  max-width: 100%;       /* ✅ prevent overflow */
+  box-sizing: border-box; /* ✅ include padding in width */
   padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 8px;
   font-size: 1rem;
+  color: #fff;
   outline: none;
   margin-bottom: 15px;
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-  border-color: #0077ff;
+  border-color: #B415FF;
+  box-shadow: 0 0 5px rgba(180, 21, 255, 0.5);
 }
 
+/* Submit Button */
 .contact-submit {
-  background: linear-gradient(267deg , #DA7C25 0.36%, #B923E1);
+  background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1);
+  color: #fff;
   padding: 12px 25px;
   border: none;
   cursor: pointer;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 500;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contact-submit:hover {
   border: 2px solid white;
+  transform: translateY(-2px);
 }
 
 a {
@@ -123,6 +148,7 @@ a:hover {
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-left,
