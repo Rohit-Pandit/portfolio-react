@@ -3,6 +3,12 @@
   text-align: center;
   color: white;
 }
+.project-title{
+  font-size: 2 rem;
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .project-grid {
   display: grid;

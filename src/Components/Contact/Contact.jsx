@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className='contact'>
         <div className="contact-title">
-             <h1>Get in Touch</h1>
+             <h2>Get in Touch</h2>
              <p>Let’s connect and build something amazing together 🚀</p>
         </div>
         <div className="contact-section">

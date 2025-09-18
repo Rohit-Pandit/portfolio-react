@@ -6,7 +6,7 @@ import './Project.css';
 const Project = () => {
   return (
      <div className="projects">
-      <h2>My Projects</h2>
+      <h2 className='project-title'>Crafted with Code</h2>
       <div className="project-grid">
         {Data.map((proj) => (
           <div key={proj.id} className="project-card">

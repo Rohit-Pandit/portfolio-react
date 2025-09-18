@@ -6,6 +6,7 @@ const Home = () => {
   return (
     <div className="home">
       {/* Profile Image */}
+      <h1 className="home-title">Hello, World!</h1>
       <img src={profile} alt="avatar" />
 
       {/* Heading */}

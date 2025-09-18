@@ -5,7 +5,7 @@ import certificates from './certificateData.json'
 const Certificate = () => {
   return (
     <div className="certificates-container">
-      <h2 className="certificates-title">My Certificates</h2>
+      <h2 className="certificates-title">Milestones</h2>
       <div className="certificates-grid">
         {certificates.map((cert, index) => (
           <div key={index} className="certificate-card">

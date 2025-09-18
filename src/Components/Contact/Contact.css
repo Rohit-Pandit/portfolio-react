@@ -11,8 +11,8 @@
   margin-bottom: 3rem;
 }
 
-.contact-title h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+.contact-title h2 {
+  font-size: 2rem;
   background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

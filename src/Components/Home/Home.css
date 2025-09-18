@@ -9,6 +9,12 @@
   width: 100%;
   box-sizing: border-box;
 }
+.home-title {
+  font-size: 2rem;
+  background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* Profile Image */
 .home img {

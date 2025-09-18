@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="about-title">
-        <h1>About Me</h1>
+        <h2>Meet Rohit</h2>
       </div>
 
       <div className="about-section">
@@ -38,11 +38,11 @@ const About = () => {
             </div>
             <div className="about-skill">
               <p>React.js</p>
-              <div className="skill-bar"><div className="skill-level" style={{width:"80%"}}></div></div>
+              <div className="skill-bar"><div className="skill-level" style={{width:"70%"}}></div></div>
             </div>
             <div className="about-skill">
               <p>JavaScript</p>
-              <div className="skill-bar"><div className="skill-level" style={{width:"75%"}}></div></div>
+              <div className="skill-bar"><div className="skill-level" style={{width:"85%"}}></div></div>
             </div>
           </div>
         </div>
