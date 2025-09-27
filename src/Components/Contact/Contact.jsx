@@ -1,24 +1,19 @@
-import React, { use } from 'react';
+import React, { useRef } from 'react';
 import phone from './../../assets/phone.png';
 import email from './../../assets/email.png';
 import location from './../../assets/location.png';
 import linkedin from './../../assets/linkedin.png';
 import './Contact.css';
-import dotenv from 'dotenv';
-
-dotenv.config();
-
-
-
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault(); 
-        emailjs.sendForm(process.env.VITE_EMAILJS_SERVICE_ID, 
-                        process.env.VITE_EMAILJS_TEMPLATE_ID, 
-                        form.current, 
-                        process.env.VITE_EMAILJS_PUBLIC_KEY)
+        emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+                        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+                         form.current, 
+                         import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
           .then((result) => {
               console.log("Email sent successfully:",result.text);
               alert("✅ Message sent! I will get back to you soon.");
