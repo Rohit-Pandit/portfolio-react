@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { use } from 'react';
 import phone from './../../assets/phone.png';
 import email from './../../assets/email.png';
 import location from './../../assets/location.png';
 import linkedin from './../../assets/linkedin.png';
 import './Contact.css';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+
 
 
 const Contact = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault(); 
+        emailjs.sendForm(process.env.VITE_EMAILJS_SERVICE_ID, 
+                        process.env.VITE_EMAILJS_TEMPLATE_ID, 
+                        form.current, 
+                        process.env.VITE_EMAILJS_PUBLIC_KEY)
+          .then((result) => {
+              console.log("Email sent successfully:",result.text);
+              alert("✅ Message sent! I will get back to you soon.");
+              form.current.reset(); // Reset the form after submission
+          }, (error) => {
+              console.log("Failed to send email:",error.text);
+              alert("❌ Failed to send message. Please try again later.");
+          });
+      }
   return (
     <div className='contact'>
         <div className="contact-title">
@@ -41,13 +62,15 @@ const Contact = () => {
                 </div>
             </div>
             <div className="contact-right">
-                <label htmlFor="">Your Name</label>
-                <input type='text' name='name' placeholder='Enter your name'/>
-                <label htmlFor="">Your Email</label>
-                <input type="email" placeholder='Enter your email' />
-                <label>Write your message here...</label>
-                <textarea name='message' rows='8' placeholder='Enter your message'></textarea>
-                <button type='submit' className='contact-submit'>Submit now</button>
+                <form ref={form} onSubmit={sendEmail}>
+                    <label htmlFor="">Your Name</label>
+                    <input type='text' name='name' placeholder='Enter your name'/>
+                    <label htmlFor="">Your Email</label>
+                    <input type="email" placeholder='Enter your email' />
+                    <label>Write your message here...</label>
+                    <textarea name='message' rows='8' placeholder='Enter your message'></textarea>
+                    <button type='submit' className='contact-submit'>Submit now</button>
+                </form>
             </div>
         </div>
     </div>
