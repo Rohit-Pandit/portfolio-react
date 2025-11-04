@@ -44,6 +44,15 @@
     "tech": ["JavaScript", "HTML", "CSS"],
     "link": "https://drum-music-orcin.vercel.app/",
     "github": "https://github.com/Rohit-Pandit/DrumMusic"
+  },
+  {
+    "id": 6,
+    "title": "LeetMeter",
+    "description": "The app allows users to enter a LeetCode username, fetches their profile details from the LeetCode public API, and dynamically displays key stats on the web page.",
+    "image": "/projectImg/leetmeter.png",
+    "tech": ["JavaScript", "HTML", "CSS"],
+    "link": "https://leetmeter.vercel.app/",
+    "github": "https://github.com/Rohit-Pandit/leetmeter"
   }
   
   
